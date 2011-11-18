@@ -8,6 +8,12 @@ See requirements file::
 
     pip install -r requirements
 
+Installation
+============
+Installation from github::
+
+    pip install -e git+https://github.com/RANUX/simptools#egg=simptools
+
 DictObject
 ============
 DictObject is useful when you need to convert dictionary to object.::
