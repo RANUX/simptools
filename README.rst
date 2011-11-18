@@ -4,12 +4,13 @@ Simptools is a suit with useful functions for daily usage.
 
 Dependencies
 ============
-See requirements file.
-pip install -r requirements
+See requirements file::
+
+    pip install -r requirements
 
 DictObject
 ============
-DictObject is useful when you need to convert dictionary to object.
+DictObject is useful when you need to convert dictionary to object.::
 
     from simptools.dict2object import DictObject
 
@@ -17,7 +18,7 @@ DictObject is useful when you need to convert dictionary to object.
     obj.a
     obj.b
 
-Example from simple django view function:
+Example from simple django view function::
 
     from simptools.dict2object import DictObject
 
@@ -25,10 +26,18 @@ Example from simple django view function:
         GET = DictObject(request.GET)
         return render_to_response('hello.html', {'name': GET.name})
 
+class_factory
+============
+Dynamically loads class::
+
+    EmptyClass = class_factory('tests.classes.EmptyClass')
+    empty_cls = EmptyClass()
+
 Testing
 ============
-Go to simptools directory and run tests:
-nosetests --all-modules --nologcapture --verbosity=2
+Go to simptools directory and run tests::
+
+    nosetests --all-modules --nologcapture --verbosity=2
 
 
 Contributing
