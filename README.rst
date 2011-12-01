@@ -45,6 +45,7 @@ Useful function for working with decimals.
 
 For financial applications::
 
+    >>> from simptools.decimals import two_places_round_down, two_places_round_up
     >>> two_places_round_up(10.00001)   # result Decimal('10.01')
     >>> two_places_round_down(10.00001) # result Decimal('10.00')
 
