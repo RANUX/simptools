@@ -39,6 +39,15 @@ Dynamically loads class::
     EmptyClass = class_factory('tests.classes.EmptyClass')
     empty_cls = EmptyClass()
 
+decimals
+============
+Useful function for working with decimals.
+
+For financial applications::
+
+    >>> two_places_round_up(10.00001)   # result Decimal('10.01')
+    >>> two_places_round_down(10.00001) # result Decimal('10.00')
+
 Testing
 ============
 Go to simptools directory and run tests::
