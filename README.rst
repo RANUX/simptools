@@ -39,15 +39,17 @@ Dynamically loads class::
     EmptyClass = class_factory('tests.classes.EmptyClass')
     empty_cls = EmptyClass()
 
-decimals
+money extension
 ============
-Useful function for working with decimals.
+moneyed.Money extension.
 
-For financial applications::
+Example::
 
-    >>> from simptools.decimals import two_places_round_down, two_places_round_up
-    >>> two_places_round_up(10.00001)   # result Decimal('10.01')
-    >>> two_places_round_down(10.00001) # result Decimal('10.00')
+    >>> from simptools.money import Money
+    >>> money = Money(10.0001, moneyed.RUB)
+    >>> money.round_up()   # result Decimal('10.01')
+    >>> money = Money(10.0001, moneyed.RUB)
+    >>> money.round_down() # result Decimal('10.00')
 
 Testing
 ============
@@ -55,6 +57,12 @@ Go to simptools directory and run tests::
 
     nosetests --all-modules --nologcapture --verbosity=2
 
+
+Release notes
+=============
+
+- 0.4
+  * simptools.decimals removed
 
 Contributing
 ============
