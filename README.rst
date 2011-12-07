@@ -45,11 +45,10 @@ moneyed.Money extension.
 
 Example::
 
-    >>> from simptools.money import Money
-    >>> money = Money(10.0001, moneyed.RUB)
-    >>> money.round_up()   # result Decimal('10.01')
-    >>> money = Money(10.0001, moneyed.RUB)
-    >>> money.round_down() # result Decimal('10.00')
+    >>> from simptools.money import Money, round_down, round_up
+    >>> import moneyed
+    >>> round_up(Money(10.0001, moneyed.RUB))  # result 10.01 RUB
+    >>> round_down(Money(10.0001, moneyed.RUB))  # result 10.00 RUB
 
 Testing
 ============
@@ -62,7 +61,7 @@ Release notes
 =============
 
 - 0.4
-  * simptools.decimals removed
+  - simptools.decimals removed
 
 Contributing
 ============

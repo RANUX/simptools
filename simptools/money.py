@@ -1,18 +1,18 @@
 # -*- coding: UTF-8 -*-
 from decimal import Decimal, ROUND_UP, ROUND_DOWN
 import moneyed
+from moneyed.classes import Money
 
 
 __author__ = 'Razzhivin Alexander'
 __email__ = 'admin@httpbots.com'
 
 
-class Money(moneyed.Money):
-    '''
-    moneyed.Money extension
-    '''
-    def round_up(self):
-        self.amount = Decimal(self.amount).quantize(Decimal('0.01'), rounding=ROUND_UP)
+'''
+moneyed.Money extension
+'''
+def round_up(money):
+    return Money(Decimal(money.amount).quantize(Decimal('0.01'), rounding=ROUND_UP), money.currency)
 
-    def round_down(self):
-        self.amount = Decimal(self.amount).quantize(Decimal('0.01'), rounding=ROUND_DOWN)
+def round_down(money):
+    return Money(Decimal(money.amount).quantize(Decimal('0.01'), rounding=ROUND_DOWN), money.currency)
