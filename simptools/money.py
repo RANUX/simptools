@@ -1,6 +1,5 @@
 # -*- coding: UTF-8 -*-
 from decimal import Decimal, ROUND_UP, ROUND_DOWN
-import moneyed
 from moneyed.classes import Money
 
 
