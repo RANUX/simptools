@@ -50,6 +50,17 @@ Example::
     >>> round_up(Money(10.0001, moneyed.RUB))  # result 10.01 RUB
     >>> round_down(Money(10.0001, moneyed.RUB))  # result 10.00 RUB
 
+
+test_catch_and_log_exception
+============================
+Wraps try-except block and log it
+
+Example::
+
+    @catch_and_log_exception
+    def div_by_zero(self):
+        return 1/0
+
 Testing
 ============
 Go to simptools directory and run tests::
