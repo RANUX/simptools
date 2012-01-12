@@ -71,6 +71,9 @@ Go to simptools directory and run tests::
 Release notes
 =============
 
+- 0.5
+  - simptools.decorators.catch_and_log_exception added
+
 - 0.4
   - simptools.decimals removed
 
