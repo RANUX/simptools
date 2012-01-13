@@ -57,9 +57,11 @@ Wraps try-except block and log it
 
 Example::
 
-    @catch_and_log_exception
+    @catch_and_log_exception(return_expression=-1)
     def div_by_zero(self):
         return 1/0
+
+return_expression - will leave the current function call with the expression list (or None) as return value.
 
 Testing
 ============
