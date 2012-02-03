@@ -1,0 +1,6 @@
+django
+unittest
+nose
+requests
+-e git+https://github.com/limist/py-moneyed.git#egg=py-moneyed
+Flask

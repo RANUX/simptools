@@ -1,4 +1,0 @@
-django
-unittest
-nose
--e git+https://github.com/limist/py-moneyed.git#egg=py-moneyed

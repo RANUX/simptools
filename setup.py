@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 from setuptools import setup, find_packages
 
-VERSION = '0.5'
+VERSION = '0.6'
 
 setup(
     version=VERSION,
@@ -15,5 +15,6 @@ setup(
     platforms=['any'],
     include_package_data=True,
     test_suite='tests',
-    tests_require=['nose', 'testfixtures','py-moneyed>=0.3', ]
+    required = 'requests',
+    tests_require=['nose', 'testfixtures','py-moneyed>=0.3', 'Flask']
 )
