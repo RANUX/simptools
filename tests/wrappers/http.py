@@ -3,7 +3,7 @@ import threading
 from time import sleep
 from unittest.case import TestCase
 from nose.tools import eq_, raises
-from simptools.wrappers import HttpRequest, HttpClient, HttpClientException
+from simptools.wrappers.http import HttpRequest, HttpClient, HttpClientException
 from tests.wrappers import server
 from tests.wrappers.server import  run_server
 
