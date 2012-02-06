@@ -14,7 +14,7 @@ setup(
     license = 'LGPL',
     platforms=['any'],
     include_package_data=True,
+    install_requires = ['requests',],
     test_suite='tests',
-    required = 'requests',
     tests_require=['nose', 'testfixtures','py-moneyed>=0.3', 'Flask']
 )
