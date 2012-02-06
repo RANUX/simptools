@@ -1,14 +1,11 @@
 # -*- coding: UTF-8 -*-
-import os
-from subprocess import Popen
 import threading
 from time import sleep
 from unittest.case import TestCase
-from nose.tools import eq_
-import signal
-from simptools.http import HttpRequest, HttpClient
-from tests.http import server
-from tests.http.server import PATH_TO_SERVER, run_server
+from nose.tools import eq_, raises
+from simptools.wrappers import HttpRequest, HttpClient, HttpClientException
+from tests.wrappers import server
+from tests.wrappers.server import  run_server
 
 __author__ = 'Razzhivin Alexander'
 __email__ = 'admin@httpbots.com'
@@ -61,6 +58,9 @@ class HttpClientTestCase(TestCase):
         eq_(200, response.status_code)
         self.assertIn('3', response.text)
 
+    @raises(HttpClientException)
+    def test_empty_request(self):
+        HttpClient.execute(HttpRequest())
 
     @classmethod
     def tearDownClass(cls):

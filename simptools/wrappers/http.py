@@ -7,14 +7,21 @@ __email__ = 'admin@httpbots.com'
 
 
 class HttpRequest(object):
-
+    '''
+    Here you can put logic for building request.
+    '''
     def __init__(self):
         self.GET  = {}
         self.POST = {}
 
+class HttpClientException(Exception):
+    pass
+
 class HttpClient(object):
     '''
-    Wrapper over requests library
+    Wrapper over requests library.
+    For more information over requests
+    see https://github.com/kennethreitz/requests/blob/develop/requests/models.py
     '''
 
     @classmethod
@@ -23,4 +30,4 @@ class HttpClient(object):
             return requests.get(**request.GET)
         elif request.POST:
             return requests.post(**request.POST)
-        return None
+        raise HttpClientException("request is empty")
